@@ -9,8 +9,12 @@ public class TestMainClass {
 		GraveOwner ownerFlo = new GraveOwner();
 		ownerFlo.setFirstName("Flo");
 		
+		GraveOwner ownername = new GraveOwner();
+		ownername.setFamilyName("Mühleder");
+				
+		
 		System.out.println(owner.getFirstName());
-
+		System.out.println(owner.getFamilyName());
 	}
 
 }
