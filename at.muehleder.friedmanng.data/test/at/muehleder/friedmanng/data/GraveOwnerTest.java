@@ -7,9 +7,21 @@ import org.junit.Test;
 public class GraveOwnerTest {
 	
 	@Test
-	public void test() {
-		assertEquals(5, 5);
-		assertEquals(4, 5);
+	public void testSetterAndGetter() {
+		GraveOwner owner = new GraveOwner();
+		owner.setFirstName("Hugo");
+		owner.setFamilyName("Muster");
+		owner.setHouseNumber(8);
+		owner.setPostalCode(4512);
+		owner.setStreetName("Bergstraﬂe");
+		owner.setTown("Ort");
+		
+		assertEquals("Hugo", owner.getFirstName());
+		assertEquals("Muster", owner.getFamilyName());
+		assertEquals(8, owner.getHouseNumber());
+		assertEquals(4512, owner.getPostalCode());
+		assertEquals("Bergstraﬂe", owner.getStreetName());
+		assertEquals("Ort", owner.getTown());
 		
 	}
 
