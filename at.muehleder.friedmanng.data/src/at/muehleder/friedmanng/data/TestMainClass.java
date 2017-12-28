@@ -6,11 +6,12 @@ public class TestMainClass {
 		GraveOwner owner = new GraveOwner();
 		owner.setFirstName("Jonas");
 		
-		GraveOwner ownerFlo = new GraveOwner();
-		ownerFlo.setFirstName("Flo");
+		GraveOwner ownername = new GraveOwner();
+		ownername.setFamilyName("Mühleder");
+				
 		
 		System.out.println(owner.getFirstName());
-
+		System.out.println(ownername.getFamilyName());
 	}
 
 }
