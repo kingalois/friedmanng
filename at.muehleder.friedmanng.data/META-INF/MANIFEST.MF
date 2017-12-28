@@ -17,4 +17,5 @@ Require-Bundle: org.junit,
  org.junit.vintage.engine,
  org.hamcrest.core,
  org.opentest4j,
- org.apiguardian
+ org.apiguardian,
+ at.muehleder.friedmanng.logging;bundle-version="0.0.1"

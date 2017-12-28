@@ -11,9 +11,8 @@ public class LoggerFactory {
 	
 	static {
 		Logger log = Logger.getLogger(LOGGER_NAME_PRAEFIX);
-		for (Handler h : log.getHandlers()) {
-			log.removeHandler(h);
-		}
+		log.setUseParentHandlers(false);
+		
 		Handler consoleHandler = new ConsoleHandler();
 		consoleHandler.setFormatter(new DefaultFormatter());
 
