@@ -22,6 +22,10 @@ public class CarList {
 		
 	}
 	
+	public Car getCarByOwner(String owner) {
+		return null;
+	}
+	
 	
 	
 	public void print() {
