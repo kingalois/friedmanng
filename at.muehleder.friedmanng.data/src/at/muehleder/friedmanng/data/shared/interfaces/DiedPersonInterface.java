@@ -1,4 +1,4 @@
-package at.muehleder.friedmanng.data.shared;
+package at.muehleder.friedmanng.data.shared.interfaces;
 
 public interface DiedPersonInterface {
 	

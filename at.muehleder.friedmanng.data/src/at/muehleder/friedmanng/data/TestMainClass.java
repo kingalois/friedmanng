@@ -13,8 +13,13 @@ public class TestMainClass {
 
 	public static void main(String[] args) {
 		GraveOwner owner = new GraveOwner();
+		GraveOwner flo = null;
+		if(flo == null) {
+			
+		}
+		
 		owner.setFirstName("Jonas");
-
+		
 		GraveOwner ownername = new GraveOwner();
 		ownername.setFamilyName("Mühleder");
 
