@@ -1,77 +1,74 @@
 package at.muehleder.friedmanng.data;
 
-public class DiedPerson {
+import java.util.UUID;
+
+import at.muehleder.friedmanng.data.shared.interfaces.DiedPersonInterface;
+import at.muehleder.friedmanng.data.shared.interfaces.GraveInterface;
+import at.muehleder.friedmanng.data.shared.interfaces.InternalGravePositionInterface;
+
+public class DiedPerson extends AbstractPerson implements DiedPersonInterface {
+	
+	private long deathday;
+	private long dayOfInterment;
+	private int age;
+	private GraveInterface grave;
+	private InternalGravePositionInterface internalPos;
+	
+
+	public DiedPerson(UUID uuid) {
+		super(uuid);
+	}
+
+	@Override
+	public int getAge() {
+		return age;
+	}
+
+	@Override
+	public long getDeathday() {
+		return deathday;
+	}
+
+	@Override
+	public long getDayOfInterment() {
+		return dayOfInterment;
+	}
+
+	@Override
+	public void setAge(int age) {
+		this.age = age;
 		
-	private String firstName;
-	private String familyname;
-	private String adress;
-	private int houseNumber;
-	private int postalcode;
-	private String town;
-	private String dayOfDeath;
-	private String funeralday;
-	
-	public void setFirstName(String nameFirst ) {
-		firstName = nameFirst;
-	}
-	
-	public String getFirstName() {
-		return firstName;
-	}
-	
-	public void setFamilyName(String nameSecond) {
-		familyname = nameSecond;
-	}
-	
-	public String getFamilyName() {
-		return familyname;
-	}
-	
-	public void setAdress(String adressName) {
-		adress = adressName;
-	}
-	public String getAdress() {
-		return adress;
 	}
 
-	public void setHouseNumber(int streetNumber) {
-		houseNumber = streetNumber;
-	}
-	
-	public int getHouseNumber() {
-		return houseNumber;
+	@Override
+	public void setDeathday(long deathday) {
+		this.deathday = deathday;
 	}
 
-	public void setPostalCode(int postcode) {
-		postalcode = postcode;
-	}
-	
-	public int getPostalCode(){
-		return postalcode;
+	@Override
+	public void setDayOfInterment(long dayOfInterment) {
+		this.dayOfInterment = dayOfInterment;
 	}
 
-	public void setTown(String village) {
-		town = village;
+	@Override
+	public GraveInterface getGrave() {
+		return grave;
 	}
-	
-	public String getTown() {
-		return town;
+
+	@Override
+	public void setGrave(GraveInterface grave) {
+		this.grave = grave;
 	}
-	
-	public void setDayOfDeath(String deathDay) {
-		dayOfDeath = deathDay;
+
+	@Override
+	public void setInternalPosition(InternalGravePositionInterface internalPos) {
+		this.internalPos = internalPos;
 	}
-	
-	public String getDayOfDeath() {
-		return dayOfDeath;
+
+	@Override
+	public InternalGravePositionInterface getInternalPosition() {
+		return internalPos;
 	}
-	
-	public void setFuneralday(String dayOfFuneral) {
-		funeralday = dayOfFuneral;
-	}
-	
-	public String getFuneralday(){
-		return funeralday;
-	}
+		
 
 }

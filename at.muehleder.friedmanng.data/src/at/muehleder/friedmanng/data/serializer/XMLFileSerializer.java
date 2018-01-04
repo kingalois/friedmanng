@@ -1,13 +1,11 @@
 package at.muehleder.friedmanng.data.serializer;
 
-import java.io.FileReader;
 import java.io.FileWriter;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import org.eclipse.ui.XMLMemento;
 
-import at.muehleder.friedmanng.data.shared.interfaces.DataManagerInterface;
 import at.muehleder.friedmanng.data.shared.serializer.SerializerInterface;
 import at.muehleder.friedmanng.logging.LoggerFactory;
 
@@ -23,7 +21,7 @@ public class XMLFileSerializer implements SerializerInterface {
 	}
 
 	@Override
-	public void serialize(DataManagerInterface dataManager) {
+	public void serialize() {
 		try(FileWriter reader = new FileWriter(file);) {
 			
 			XMLMemento memento = XMLMemento.createWriteRoot(ROOT);
@@ -35,7 +33,7 @@ public class XMLFileSerializer implements SerializerInterface {
 	}
 
 	@Override
-	public void deserialize(DataManagerInterface dataManager) {
+	public void deserialize() {
 		// TODO Auto-generated method stub
 
 	}
